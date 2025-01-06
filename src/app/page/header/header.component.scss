@@ -12,7 +12,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
 }
 
 .img img{
@@ -79,18 +78,29 @@ a.btn{
     color: #C06283;
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-width: 480px) {
+    .container{
+        padding: 15px;
+    }
     .text{
         width: 100%;
+        .title{
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        .subtitle{
+            font-size: 14px;
+        }
+        p{
+            font-size: 16px;
+        }
     }
-    .title{
-        margin-bottom: 10px;
-        font-size: 32px;
-    }
-    .subtitle{
-        font-size: 14px;
-    }
-    p{
-        font-size: 16px;
+    .button{
+        flex-direction: column;
+        justify-content: center;
+
+        a.btn{
+            text-align: center;
+        }
     }
 }
