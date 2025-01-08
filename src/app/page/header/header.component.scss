@@ -1,6 +1,6 @@
 .mosaico{
     width: 100%;
-    height: calc(100vh - 64px);
+    height: 100vh;
     background-image: url('../../../assets/mosaico.png');
     background-size: cover;
     background-position: center;
@@ -10,8 +10,11 @@
 .container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: calc(100vh - 64px);
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 .content{
@@ -22,24 +25,24 @@
 }
 
 .img img{
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
 }
 
 .text{
     font-family: "Inter", sans-serif;
     color: #FFFFFF;
     text-align: center;
-    width: 55%;
-    margin-bottom: 40px;
+    width: 70%;
+    margin-bottom: 20px;
 
     .title{
         font-size: 48px;
         font-weight: 600;
-        color: #C06283;
+        color: #b41a59;
         margin: 0;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         text-shadow: 
         1px 1px 0 white,   /* Sombra inferior direita */
         -1px 1px 0 white,  /* Sombra inferior esquerda */
@@ -48,20 +51,25 @@
         strong{
             color: #FFFFFF;
             text-shadow: 
-            1px 1px 0 #C06283,   /* Sombra inferior direita */
-            -1px 1px 0 #C06283,  /* Sombra inferior esquerda */
-            1px -1px 0 #C06283,  /* Sombra superior direita */
-            -1px -1px 0 #C06283;
+            1px 1px 0 #b41a59,   /* Sombra inferior direita */
+            -1px 1px 0 #b41a59,  /* Sombra inferior esquerda */
+            1px -1px 0 #b41a59,  /* Sombra superior direita */
+            -1px -1px 0 #b41a59;
         }
     }
 
     .subtitle{
-        color: white;
+        color: #0d3c89;
         font-weight: 600;
         margin: 0px;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        // text-shadow: 
+        //     1px 1px 0 #b41a59,   /* Sombra inferior direita */
+        //     -1px 1px 0 #b41a59,  /* Sombra inferior esquerda */
+        //     1px -1px 0 #b41a59,  /* Sombra superior direita */
+        //     -1px -1px 0 #b41a59;
         strong{
-            color: #C06283;
+            color: #b41a59;
             text-shadow: 
             1px 1px 0 white,   /* Sombra inferior direita */
             -1px 1px 0 white,  /* Sombra inferior esquerda */
@@ -74,11 +82,12 @@
         font-size: 28px;
         font-weight: 700;
         margin: 0px;
+        color: #b41a59;
         text-shadow: 
-            1px 1px 0 #C06283,   /* Sombra inferior direita */
-            -1px 1px 0 #C06283,  /* Sombra inferior esquerda */
-            1px -1px 0 #C06283,  /* Sombra superior direita */
-            -1px -1px 0 #C06283;
+            1px 1px 0 white,   /* Sombra inferior direita */
+            -1px 1px 0 white,  /* Sombra inferior esquerda */
+            1px -1px 0 white,  /* Sombra superior direita */
+            -1px -1px 0 white;
     }
 }
 
@@ -99,30 +108,39 @@ a.btn{
 }
 
 .primary{
-    background-color: #C06283;
+    background-color: #b41a59;
     color: #FFFFFF;
 }
 
 .secondary{
-    border: 1px solid #C06283;
+    border: 1px solid #b41a59;
     background-color: #FFFFFF;
-    color: #C06283;
+    color: #b41a59;
 }
 
 @media only screen and (max-width: 480px) {
     .container{
-        padding: 15px;
-        height: calc(100vh - 94px);
+        height: 100%;
+    }
+    .content{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .img img{
+        width: 125px;
+        height: 125px;
+        margin-bottom: 15px;
     }
     .text{
         width: 100%;
+        margin-bottom: 15px;
         .title{
             margin-bottom: 10px;
-            font-size: 32px;
+            font-size: 28px;
         }
         .subtitle{
             font-size: 14px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
         }
         p{
             font-size: 16px;
@@ -131,7 +149,7 @@ a.btn{
     .button{
         flex-direction: column;
         justify-content: center;
-
+        gap: 10px;
         a.btn{
             text-align: center;
         }
