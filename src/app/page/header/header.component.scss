@@ -120,11 +120,13 @@ a.btn{
 
 @media only screen and (max-width: 480px) {
     .container{
-        height: 100%;
+       justify-content: center; 
+       height: 100%;
     }
     .content{
         margin-left: 0.5rem;
         margin-right: 0.5rem;
+        
     }
     .img img{
         width: 125px;

@@ -1,0 +1,43 @@
+.nav{
+    margin-left: 10%; 
+    margin-right: 10%;
+    
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+a:hover{
+    color: #0D3C89;
+}
+
+.footer{
+    background-color: #b41a59;
+}
+
+.footer a > i {
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+  color: white
+}
+
+hr{
+    border: none;
+    height: 2px;
+    background-color: white; /* Cor da linha */
+    width: 100%;
+}
+
+@media only screen and (max-width: 501px) {
+    .center{
+        display: flex;
+        justify-content: center !important;
+        text-align: center;
+    }
+}
