@@ -1,5 +1,5 @@
 .background {
-    background-color: rgba($color: #00A395, $alpha: 0.7);
+    background-color: #00A395;
     margin-top: 70px;
 }
 
@@ -45,4 +45,28 @@ iframe{
     h1{
         font-size: 30px;
     }
+}
+
+.button{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+a.btn{
+    border-radius: 8px;
+    font-family: "Inter", sans-serif;
+    padding: 10px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.secondary{
+    border: 1px solid #b41a59;
+    background-color: #FFFFFF;
+    color: #b41a59;
 }

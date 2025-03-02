@@ -1,0 +1,56 @@
+
+.patrocinio{
+	background-color: #00A395;
+}
+
+@media (max-width: 480px) {
+    h1{
+        font-size: 30px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    h1{
+        font-size: 45px;
+    }
+
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    h1{
+        font-size: 50px;
+    }
+
+}
+@keyframes rolar {
+	0% { transform:translateX(0); }
+	100% { transform:translateX(calc(-170px * 7))}
+}
+.cliente {
+	width:170px;
+	height:100px;
+	text-align:center;
+	display:inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.clientes img {
+	max-height:100px;
+	max-width:170px;
+    
+}
+
+.clientes {
+	/* 17 é o número de clientes.
+	Se novos clientes, incremente à quantidade. */
+	width:calc(170px * (7 * 2) + 170px);
+	overflow-x:hidden;
+	animation:rolar calc(3s * 7) linear infinite;
+	display: flex;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}

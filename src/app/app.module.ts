@@ -14,7 +14,15 @@ import { FaqComponent } from './page/faq/faq.component';
 import { ParceriasComponent } from './page/parcerias/parcerias.component';
 import { EmpresasComponent } from './page/empresas/empresas.component';
 import { FooterComponent } from './components/footer/footer.component';
-
+import { PatrocinioComponent } from './page/patrocinio/patrocinio.component';
+import { ProgramacaoComponent } from './page/programacao/programacao.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'primeng/carousel';
+import { PaginatorModule } from 'primeng/paginator';
+import { LayoutComponent } from './page/layout/layout.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,11 +36,23 @@ import { FooterComponent } from './components/footer/footer.component';
     FaqComponent,
     ParceriasComponent,
     EmpresasComponent,
-    FooterComponent
+    FooterComponent,
+    PatrocinioComponent,
+    ProgramacaoComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    CarouselModule,
+    PaginatorModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

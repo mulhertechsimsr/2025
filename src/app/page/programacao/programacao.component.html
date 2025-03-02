@@ -1,0 +1,163 @@
+<div>
+    <div>
+        <h1>Programação</h1>
+    </div>
+    <div>
+        <div class="container mt-5 mb-5">
+            <div *ngIf="horario">
+               <div class="d-flex justify-content-center mt-5 mb-5">
+                    <button class="button button_active me-4" (click)="troca()">Manhã</button>
+                    <button class="button" (click)="troca()">Tarde</button>
+                </div>
+        
+                <div class="container mt-4" *ngFor="let item of items_manha">
+                    <button class="button button_children horario" style="margin-bottom: -50px; font-size: 14px;"><strong class="horarios">{{item.horario}}</strong></button>
+                    <div class="programacao_manha">
+                        <p class="mb-4">{{item.titulo}}</p>
+                        <div>
+                            <p *ngIf="item.palestrante" class="palestrante">{{item.palestrante}}</p>
+                            <p  *ngIf="item.cargo" class="palestrante">{{item.cargo}}</p>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="container mt-4">
+                    <button class="button button_children horario" style="margin-bottom: -50px; font-size: 14px;"><strong class="horarios">10:00 - 11:00</strong></button>
+                    <div class="programacao_children">
+                        <p-carousel [showIndicators]="false" [value]="children1" [numVisible]="5" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+                            <ng-template let-item pTemplate="item">
+                                <div *ngIf="item.color" class="me-3">
+                                    <button class="button horario" [style]="'z-index: 99999; position: relative;color: white; background-color:' + item.color + '; border: none'" style="margin-bottom: -50px; font-size: 14px;"><strong>{{item.sala}}</strong></button>
+                                    <div class="programacao_tarde card" [style]="'border: 1px solid' + item.color">
+                                        <div class="img">
+                                            <div class="text">
+                                                <img [src]="item.foto" width="80%"/>
+                                                <p class="palestrante"><strong style="color:#b41a59">{{item.palestrante}}</strong></p>
+                                                <p class="titulo">{{item.titulo}}</p>
+                                            </div>
+                                        </div>
+                                        <button *ngIf="item.atividade != 'Palestra' && item.exibir != false" class="btn-light btn" [routerLink]="'/atividades/' + item.id">Inscreva-se</button>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-carousel>
+                    </div>
+                </div>
+
+                <div class="container mt-4">
+                    <button class="button button_children horario" style="margin-bottom: -50px; font-size: 14px;"><strong class="horarios">10:00 - 11:00</strong></button>
+                    <div class="programacao_children">
+                        <p-carousel [showIndicators]="false" [value]="children2" [numVisible]="5" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+                            <ng-template let-item pTemplate="item">
+                                <div *ngIf="item.color" class="me-3">
+                                    <button class="button horario" [style]="'z-index: 99999; position: relative;color: white; background-color:' + item.color + '; border: none'" style="margin-bottom: -50px; font-size: 14px;"><strong>{{item.sala}}</strong></button>
+                                    <div class="programacao_tarde card" [style]="'border: 1px solid' + item.color">
+                                        <div class="img">
+                                            <div class="text">
+                                                <img [src]="item.foto" width="80%"/>
+                                                <p class="palestrante"><strong style="color:#b41a59">{{item.palestrante}}</strong></p>
+                                                <p class="titulo">{{item.titulo}}</p>
+                                            </div>
+                                        </div>
+                                        <button *ngIf="item.atividade != 'Palestra' && item.exibir != false" class="btn-light btn" [routerLink]="'/atividades/' + item.id">Inscreva-se</button>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-carousel>
+                    </div>
+                </div>
+        
+                <div class="container mt-4" *ngFor="let item of items_manha2">
+                    <button class="button button_children horario" style="margin-bottom: -50px; font-size: 14px;"><strong class="horarios">{{item.horario}}</strong></button>
+                    <div class="programacao_manha">
+                        <p>{{item.titulo}}</p>
+                    </div>
+                </div> 
+            </div>
+            
+        
+            <div *ngIf="!horario">
+                <div class="d-flex justify-content-center mt-5 mb-5">
+                     <button class="button me-4" (click)="troca()">Manhã</button>
+                     <button class="button button_active_tarde" (click)="troca()">Tarde</button>
+                 </div>
+        
+                 <div class="container mt-4">
+                    <button class="button button_children horario" style="margin-bottom: -50px; font-size: 14px;"><strong class="horarios">10:00 - 11:00</strong></button>
+                    <div class="programacao_children">
+                        <p-carousel [showIndicators]="false" [value]="children3" [numVisible]="5" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+                            <ng-template let-item pTemplate="item">
+                                <div *ngIf="item.color" class="me-3">
+                                    <button class="button horario" [style]="'z-index: 99999; position: relative;color: white; background-color:' + item.color + '; border: none'" style="margin-bottom: -50px; font-size: 14px;"><strong>{{item.sala}}</strong></button>
+                                    <div class="programacao_tarde card" [style]="'border: 1px solid' + item.color">
+                                        <div class="img">
+                                            <div class="text">
+                                                <img [src]="item.foto" width="80%"/>
+                                                <p class="palestrante"><strong style="color:#b41a59">{{item.palestrante}}</strong></p>
+                                                <p class="titulo">{{item.titulo}}</p>
+                                            </div>
+                                        </div>
+                                        <button *ngIf="item.atividade != 'Palestra' && item.exibir != false" class="btn-light btn" [routerLink]="'/atividades/' + item.id">Inscreva-se</button>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-carousel>
+                    </div>
+                </div>
+
+                <div class="container mt-4">
+                    <button class="button button_children horario" style="margin-bottom: -50px; font-size: 14px;"><strong class="horarios">10:00 - 11:00</strong></button>
+                    <div class="programacao_children">
+                        <p-carousel [showIndicators]="false" [value]="children4" [numVisible]="5" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+                            <ng-template let-item pTemplate="item">
+                                <div *ngIf="item.color" class="me-3">
+                                    <button class="button horario" [style]="'z-index: 99999; position: relative;color: white; background-color:' + item.color + '; border: none'" style="margin-bottom: -50px; font-size: 14px;"><strong>{{item.sala}}</strong></button>
+                                    <div class="programacao_tarde card" [style]="'border: 1px solid' + item.color">
+                                        <div class="img">
+                                            <div class="text">
+                                                <img [src]="item.foto" width="80%"/>
+                                                <p class="palestrante"><strong style="color:#b41a59">{{item.palestrante}}</strong></p>
+                                                <p class="titulo">{{item.titulo}}</p>
+                                            </div>
+                                        </div>
+                                        <button *ngIf="item.atividade != 'Palestra' && item.exibir != false" class="btn-light btn" [routerLink]="'/atividades/' + item.id">Inscreva-se</button>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-carousel>
+                    </div>
+                </div>
+
+                <div class="container mt-4">
+                    <button class="button button_children horario" style="margin-bottom: -50px; font-size: 14px;"><strong class="horarios">10:00 - 11:00</strong></button>
+                    <div class="programacao_children">
+                        <p-carousel [showIndicators]="false" [value]="children5" [numVisible]="5" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+                            <ng-template let-item pTemplate="item">
+                                <div *ngIf="item.color" class="me-3">
+                                    <button class="button horario" [style]="'z-index: 99999; position: relative;color: white; background-color:' + item.color + '; border: none'" style="margin-bottom: -50px; font-size: 14px;"><strong>{{item.sala}}</strong></button>
+                                    <div class="programacao_tarde card" [style]="'border: 1px solid' + item.color">
+                                        <div class="img">
+                                            <div class="text">
+                                                <img [src]="item.foto" width="80%"/>
+                                                <p class="palestrante"><strong style="color:#b41a59">{{item.palestrante}}</strong></p>
+                                                <p class="titulo">{{item.titulo}}</p>
+                                            </div>
+                                        </div>
+                                        <button *ngIf="item.atividade != 'Palestra' && item.exibir != false" class="btn-light btn" [routerLink]="'/atividades/' + item.id">Inscreva-se</button>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </p-carousel>
+                    </div>
+                </div>
+         
+                 <div class="container mt-4" *ngFor="let item of items_tarde">
+                    <button class="button button_active_tarde horario" style="margin-bottom: -50px; font-size: 14px;"><strong class="horarios">{{item.horario}}</strong></button>
+                     <div class="programacao_tarde">
+                         <p>{{item.titulo}}</p>
+                     </div>
+                 </div> 
+             </div>
+        </div>
+    </div>
+</div>

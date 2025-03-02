@@ -1,0 +1,188 @@
+.programacao{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+h2{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 16.8px */
+    letter-spacing: 7px;
+    text-transform: uppercase;
+}
+
+h1{
+    font-family: "Inter", sans-serif;
+    color: #0D3C89;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    margin-top: 30px;
+}
+.red{
+    color: #D92445;
+    font-style: italic;
+}
+
+strong{
+    color: white;
+}
+strong.horarios{
+    color: #b41a59 !important
+}
+
+.image-top {
+    background-image: url('/assets/programacao-top.png'); /* Substitua 'sua-imagem-de-fundo.jpg' pelo caminho da sua imagem de fundo */
+    background-size: 50%;
+    background-position: top left; /* Define a posição no canto superior esquerdo */
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+.button_active{
+    box-shadow: 6px 6px 0px 0px #FDE293;
+}
+
+.button_active_tarde{
+    box-shadow: 6px 6px 0px 0px #F28B82;
+}
+
+.button{
+    border-radius: 4.8px;
+    border: 2px solid #000;
+    background: var(--White, #FFF);
+    color: #000;
+    font-family: Product Sans, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.48px;
+    padding: 12px 20px !important;
+}
+
+.programacao_manha{
+    border-radius: 8px;
+    border: 1px solid var(--Yellow-600, #b41a59);
+    color: #4B5262;
+    background: rgba(255, 255, 255, 0.3);
+    font-family: Product Sans Medium, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    padding: 32px 16px 16px 16px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .img {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+
+        .text{
+            text-align: center;
+        }
+    }
+}
+
+.programacao_tarde{
+    border-radius: 8px;
+    border: 1px solid var(--Yellow-600, #b41a59);
+    color: #4B5262;
+    background: rgba(255, 255, 255, 0.3);
+    font-family: Product Sans Medium, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    padding: 32px 16px 16px 16px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .img {
+        display: flex;
+        justify-content: center;
+        height: 100%;
+
+        .text{
+            text-align: center;
+        }
+    }
+}
+
+.horario{
+    font-weight: 600px !important;
+}
+
+.palestrante{
+    color: #b41a59;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    letter-spacing: 0.15px;
+}
+
+
+.card{
+    height: 300px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.button_children{
+    box-shadow: 6px 6px 0px 0px #b41a59
+}
+
+.programacao_children{
+    border-radius: 8px;
+    border: 1px solid var(--Yellow-600, #b41a59);
+    color: #4B5262;
+    font-family: Product Sans Medium, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    padding: 32px 16px 16px 16px;
+}
+
+.tamanho{
+    width: 20%;
+}
+
+p{
+    margin-bottom: 0px;
+}
+
+.titulo{
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    font-family: Product Sans Medium, sans-serif;
+}
+
+
+@media (max-width: 480px) {
+    h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    h1{
+        font-size: 38px;
+    }
+  }
