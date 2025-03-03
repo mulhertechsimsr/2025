@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'primeng/carousel';
 import { PaginatorModule } from 'primeng/paginator';
 import { LayoutComponent } from './page/layout/layout.component';
+import { WtmComponent } from './page/wtm/wtm.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +40,8 @@ import { LayoutComponent } from './page/layout/layout.component';
     FooterComponent,
     PatrocinioComponent,
     ProgramacaoComponent,
-    LayoutComponent
+    LayoutComponent,
+    WtmComponent
   ],
   imports: [
     BrowserModule,

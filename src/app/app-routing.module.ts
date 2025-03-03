@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ProgramacaoComponent } from './page/programacao/programacao.component';
 import { LayoutComponent } from './page/layout/layout.component';
+import { FaqComponent } from './page/faq/faq.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: "programacao",
     component: ProgramacaoComponent
+  },
+  {
+    path: "perguntas-frequentes",
+    component: FaqComponent
   },
   // {
   //   path: "atividades/:id",
